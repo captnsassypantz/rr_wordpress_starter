@@ -92,6 +92,7 @@ wp-content/*
 !wp-content/themes/
 !wp-content/rr_to_wp_content.xml
 !wp-content/rr_to_wp_forms.json
+!wp-content/rr-wp-starter.sql
 
 
 # ignore these plugins
