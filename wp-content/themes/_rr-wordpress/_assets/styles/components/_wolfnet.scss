@@ -1,0 +1,230 @@
+
+body#wolf #content .container img{
+	max-width: none;
+}
+
+
+#wnt-wrap .modal .modal-dialog{
+	margin: 280px auto;
+}
+
+.fa-angle-down{
+	&:before{
+				// @include fa;
+				display: inline-block;
+				// font: normal normal normal 14px/1 brandcoicons;
+				font-size: inherit;
+				text-transform: none !important;
+				text-rendering: auto;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+				transform: translateY(2px);
+				// content: "\f107";
+				position:absolute;
+				right:8px;
+				top:45%;
+				-webkit-transform:translateY(-50%);
+				-ms-transform:translateY(-50%);
+				transform:translateY(-50%);
+				z-index:10;
+				color:#111;
+				right:10px;
+				z-index:100;
+			}
+		}
+
+		body.home {
+			.wolfnet_widget.wolfnet_quickSearch.wolfnet_wWide{
+
+
+				border: none;
+				margin: 0;
+				.wolfnet_widgetTitle{
+					display: none;
+				}
+
+				.wolfnet_quickSearch_form{
+
+					input{
+						width: 100%;
+						color: #000;
+						height: 40px;
+						border-radius: 0;
+						font-size: 13px;
+					}
+
+					.wolfnet_widgetPrice{
+				// float:left;
+				display: inline-block;
+				// width:42%;
+				width: 100%;
+
+				@include breakpoint('below_750px'){
+					width: 100%;
+				}
+
+				>div{
+					&:first-of-type{
+						float:left;
+						// width: 48%;
+						width: 100%;
+						margin: 10px 0;
+
+					}
+					&:nth-of-type(2){				
+						// width: 48%;
+						width: 100%;
+						float: right;
+					}
+				}
+			}
+
+			.wolfnet_widgetBedBath{
+
+				// float: left;
+			display: inline-block;
+			// width:41%;
+			width: 100%;
+			margin: 10px 0 0;
+
+				select{
+					margin-left: 0;
+				}
+				.wolfnet_widgetBeds{
+					float: left;
+					width: 48%;
+					margin: 0;
+					height: auto;			
+				}
+				
+
+			@include breakpoint('below_750px'){
+				width: 100%;
+			}
+
+			.wolfnet_widgetBaths{
+				margin:0;
+				height:auto;
+				float:right;
+				width:48%;
+			}
+		}
+
+		.wolfnet_quickSearch_form{
+			label{display:none;}
+		}
+
+		.wolfnet_searchType{display:none;}
+
+		select{
+			color: #000;
+			-webkit-appearance:none;
+			-moz-appearance:none;
+			appearance:none;
+			height:40px;
+			width:100%;
+			padding:0 0 0 10px;
+			border: 1px solid #BABABA;
+			position:relative;
+			-webkit-border-radius:0;
+			border-radius:0;
+			background:transparent;
+			z-index:1;
+			background-color:#fff;
+			-webkit-border-radius:0px;
+			border-radius:0px;
+			margin: 0;
+		}
+
+		.fa.angle-down{
+			&:before{
+				position:absolute;
+				right:8px;
+				top:50%;
+				-webkit-transform:translateY(-50%);
+				-ms-transform:translateY(-50%);
+				transform:translateY(-50%);
+				z-index:10;
+				color:#111;
+				right:10px;
+				z-index:100;
+			}
+		}
+
+		margin:0;padding:0;border:0; text-align: left;
+
+		label{display:none !important;}
+
+		.select-holder{position:relative;display:block;margin:0 0 10px 0;}
+
+
+		.wolfnet_widgetTitle{font-size:1.75em;margin:0 0 20px 0;display:none;}
+
+		.wolfnet_quickSearchFormButton{
+			text-align:center;
+			margin-top: 15px;
+			// float: none;
+			display: inline-block;
+			// padding-top: 20px;
+			float: none;
+			width: 100%;
+
+			button{
+				height: 38px;
+				// width: 130px;
+				width: 100%;
+   				// border-radius: 5px;
+   				text-transform: capitalize;
+   				font-size: 18px;
+   				border: 1px solid #181515;
+   				font-weight: 100;
+   				text-transform: uppercase;
+   			}
+   		}
+
+   	}
+   }
+
+}
+
+
+
+.select-holder{
+	font-family: sans-serif !important;
+}
+
+body#wolf{
+	#wnt-wrap{
+
+		border-top: 4px solid $primary-color;
+
+		fieldset{
+			border: 0;
+			margin: 0;
+			padding: 0;
+		}
+
+		fieldset.open-search{
+			
+			@include breakpoint('above_900px'){
+				width: 500px;
+			}
+		}
+
+		select{
+			-webkit-appearance: inherit;
+			appearance: inherit;
+		}
+
+		.select-holder{
+			width: auto; 
+			&:after{
+				display: none;
+			}
+		}
+
+		.btn-primary{
+			background-color: $primary-color;
+		}
+	}
+}

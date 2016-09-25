@@ -1,0 +1,153 @@
+@mixin clearfix {
+	&:before, &:after { content: ""; display: table; }
+	&:after { clear: both; }
+}
+
+@mixin fa {
+	display: inline-block;
+	font: normal normal normal 14px/1 brandcoicons;
+	font-size: inherit;
+	text-transform: none !important;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	transform: translateY(2px);
+}
+
+@mixin transition($ease:ease, $speed:300ms, $property1:all, $property2:null, $property3:null, $property4:null, $property5:null) {
+	transition-property: $property1, $property2, $property3, $property4;
+	transition-timing-function: $ease;
+	transition-duration: $speed;
+}
+
+@mixin screen-reader-hide {
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	overflow: hidden;
+	position: absolute !important;
+	width: 1px;
+}
+
+@mixin screen-reader-text {
+	position: absolute;
+	left: -9999999px;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+@mixin ease-basic( $speed: 300ms, $delay: 0ms ) {
+	transition-property: opacity, transform, height, width, color, background;
+	transition-timing-function: ease;
+	transition-duration: $speed;
+	transition-delay: $delay;
+}
+
+@function em( $pixels, $context: 16 ) {
+	@return ($pixels / $context) * 1rem;
+}
+
+@mixin breakpoint( $point ) {
+	@if $point == 'navigation-to-mobile' {
+		@media ( max-width: em(1024) ) { @content; }
+	}
+	@if $point == 'navigation-to-desktop' {
+		@media ( min-width: em(1024) ) { @content; }
+	}
+	@if $point == 'sidebar-break' {
+		@media (max-width: 900px) { @content; }
+	}
+	@if $point == 'sidebar-break-up' {
+		@media (min-width: 900px) { @content; }
+	}
+	@if $point == 'grid-4-thirds-to-fours' {
+		@media (min-width: 1200px) { @content; }
+	}
+	@if $point == 'grid-4-halfs-to-thirds' {
+		@media (min-width: 1000px) and (max-width: 1200px) { @content; }
+	}
+	@if $point == 'grid-4-full-to-half' {
+		@media (min-width: 700px) and (max-width: 1000px) { @content; }
+	}
+	@if $point == 'grid-3-halfs-to-thirds' {
+		@media (min-width: 1000px) { @content; }
+	}
+	@if $point == 'grid-3-full-to-half' {
+		@media (min-width: 700px) and (max-width: 1000px) { @content; }
+	}
+	@if $point == 'grid-2-full-to-half' {
+		@media (min-width: 700px) { @content; }
+	}
+	@else if $point == '1920' {
+		@media (max-width: 1920px) { @content; }
+	}
+	@else if $point == '1600' {
+		@media (max-width: 1600px) { @content; }
+	}
+	@else if $point == '1500' {
+		@media (max-width: 1500px) { @content; }
+	}
+	@else if $point == '1400' {
+		@media (max-width: 1400px) { @content; }
+	}
+	@else if $point == '1300' {
+		@media (max-width: 1300px) { @content; }
+	}
+	@else if $point == '1200' {
+		@media (max-width: 1200px) { @content; }
+	}
+	@else if $point == '1190' {
+		@media (max-width: 1190px) { @content; }
+	}
+	@else if $point == '1100' {
+		@media (max-width: 1100px) { @content; }
+	}
+	@else if $point == '1000' {
+		@media (max-width: 1000px) { @content; }
+	}
+	@else if $point == '1000-up' {
+		@media (min-width: 1000px) { @content; }
+	}
+	@else if $point == '900' {
+		@media (max-width: 900px) { @content; }
+	}
+	@else if $point == '800' {
+		@media (max-width: 800px) { @content; }
+	}
+	@else if $point == '800-up' {
+		@media (min-width: 800px) { @content; }
+	}
+	@else if $point == '700' {
+		@media (max-width: 700px) { @content; }
+	}
+	@else if $point == '600' {
+		@media (max-width: 600px) { @content; }
+	}
+	@else if $point == '600-up' {
+		@media (min-width: 600px) { @content; }
+	}
+	@else if $point == '500' {
+		@media (max-width: 500px) { @content; }
+	}
+	@else if $point == '500-up' {
+		@media (min-width: 500px) { @content; }
+	}
+	@else {
+		@media (max-width: $point ) { @content; }
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

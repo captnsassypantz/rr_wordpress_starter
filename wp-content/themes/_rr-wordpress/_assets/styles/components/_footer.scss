@@ -1,0 +1,49 @@
+#SiteFooter {
+	padding: 30px;
+	background-color: #2a2a2a;
+	color: white;
+	text-align: center;
+
+	img{
+		    display: block;
+    	margin: 0px auto 30px;
+	}
+
+	span{
+		text-transform: uppercase;
+		letter-spacing: 2px;
+	}
+
+	.PageContainer{
+		max-width: 700px;
+	}
+
+	#Footer__RealtorLogos {
+		@include clearfix();
+
+		img {
+			padding: 30px;
+			max-width: 50%;
+
+			@include breakpoint('below_800px') {
+				padding: 15px;
+			}
+		}
+
+		img:first-of-type {
+			float: left;
+		}
+
+		img:last-of-type {
+			float: right;
+		}	
+	}
+
+	#Footer__Copy{
+		color: gray;
+	}
+
+	p {
+		font-size: 14px;
+	}
+}

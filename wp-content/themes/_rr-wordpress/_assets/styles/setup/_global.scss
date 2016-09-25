@@ -1,0 +1,236 @@
+/*-------------------------
+# Variables
+-------------------------*/
+$primary-color: #292929 !default;   // red
+$secondary-color: #c62340 !default; // dark gray
+$accent-color: #76bcc8 !default; // dark gray
+$alert-color: #f4f4f4 !default;     // cinnabar
+$success-color: #43AC6A !default;   // sea-green
+$warning-color: #f08a24 !default;   // carrot
+$info-color: #a0d3e8 !default;      // cornflower
+
+// Font family
+$global-font-family: 'Open Sans', sans-serif !default;
+$header-font-family: 'Oswald', sans-serif !default;
+$secondary-font-family: 'Lato', sans-serif !default;
+
+// Container
+$main-container: em(1000) !default;
+
+// Weight
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
+
+// Font size - set base font size in functions.scss
+$global-font-size: 16px !default;
+$global-font-size-em: em(16) !default;
+
+// Line height
+$line-height: 1.8;
+
+// Font color
+$global-font-color: #333 !default;
+$global-header-color: $primary-color !default;
+
+// Link color
+$global-link-color: #333 !default;
+$global-link-press-color: #333 !default;
+$global-link-hover-color: #333 !default;
+
+// Button color
+$global-button-color: #333 !default;
+$global-button-hover-color: #333 !default;
+$global-button-press-color: #333 !default;
+
+// Background color
+$global-background-color: transparent !default;
+$global-secondary-background-color: #fff !default;
+
+// Border radius
+$global-radius: 3px !default;
+
+// Columns/grids
+$column-gutter: em(30) !default;
+
+$form-input-height: 40px !default;
+
+$header-height: 80px !default;
+$header-background-color: #333;
+
+$z-header: 100;
+$z-header-above: 110;
+$z-header-below: 95;
+
+$z-content: 20;
+$z-content-above: 25;
+$z-content-below: 15;
+
+$z-background: 10;
+$z-background-above: 15;
+$z-background-below: 5;
+
+$z-mobile-nav: 120;
+$z-mobile-nav-above: 125;
+$z-mobile-nav-below: 115;
+
+/*-------------------------
+# Elements
+-------------------------*/
+html {
+	height: 100%;
+}
+
+body {
+	min-height: 100%;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+li {
+	vertical-align: top;
+}
+
+html {
+	background-color: #fff;
+	overflow-x: hidden;
+}
+
+body {
+	background-color: transparent;
+	color: $global-font-color;
+	cursor: auto;
+	font-family: $global-font-family;
+	font-size: $global-font-size;
+	font-size: $global-font-size-em;
+	font-weight: $font-weight-normal;
+	margin: 0;
+	padding: 0;
+	text-rendering: optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	overflow-x: hidden;
+}
+
+#SiteMainWrapper {
+	background-color: #fff;
+}
+
+.PageContainer {
+	@include clearfix();
+	max-width: em(1060);
+	margin: 0 auto;
+	position: relative;
+	z-index: 50;
+}
+
+section,
+article,
+header,
+footer {
+	position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $header-font-family;
+	color: $global-header-color;
+	font-weight: 400;
+	line-height: 1;
+	margin: 0;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+h3, h4, h5, h6{
+	text-transform: capitalize;
+}
+
+a,
+img,
+p,
+figure,
+blockquote {
+	margin: 0;
+	padding: 0;
+	&:active,
+	&:focus {
+		outline: 0;
+	}
+}
+
+.gallery {
+	&:not(.slick-initialized) {
+		opacity: 0;
+		transition: 300ms;
+	}
+	&.slick-initialized {
+		opacity: 1;
+	}
+}
+
+figcaption {
+	font-size: em(14);
+	margin: 10px auto;
+}
+
+a {
+	color: $global-font-color;
+	text-decoration: none;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	&:visited {
+		color: $global-font-color;
+	}
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+li { list-style: none; }
+
+img { max-width: 100%; width: auto; height: auto; }
+img { -ms-interpolation-mode: bicubic; }
+
+.image-defer {
+	opacity: 0;
+	transition: 300ms;
+	display: block;
+	width: 100%;
+}
+
+#map_canvas,
+.map_canvas,
+.mqa-display {
+	img,
+	embed,
+	object {
+		max-width: none !important;
+	}
+}
+
+.main-container {
+	@include clearfix;
+	position: relative;
+	z-index: $z-content;
+	max-width: $main-container;
+	margin: 0 auto;
+}
+
+.full-container {
+	@include clearfix;
+	position: relative;
+	z-index: $z-content;
+	width: 100%;
+	margin: 0 auto;
+}

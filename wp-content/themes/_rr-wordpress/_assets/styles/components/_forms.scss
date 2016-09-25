@@ -1,0 +1,236 @@
+html:not([data-bcowolf]) {
+
+	button,
+	input[type="submit"] {
+		font-weight: 700;
+		text-transform: uppercase;
+		color: #fff;
+		border: 0px solid transparent;
+		background-color: $primary-color;
+		padding: 8px;
+		text-transform: uppercase;
+		box-shadow: 0 0 transparent;
+		transition: 300ms;
+		&:focus {
+			outline: 0;
+		}
+		&:hover {
+			opacity: 0.82;
+		}
+	}
+
+	a.SolidButton {
+		font-family: $header-font-family;
+		font-weight: 700;
+		text-align: center;
+		padding: 15px 25px;
+		min-width: 200px;
+		border-radius: 3px;
+		background-color: $primary-color;
+		color: #fff;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		display: inline-block;
+	}
+
+	input[type="search"] {
+		-webkit-appearance: none;
+	}
+
+	.input-search-holder {
+		width: 100%;
+		position: relative;
+		&:after {
+			@include fa;
+			content: "\6e";
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			background-color: transparent;
+			width: $form-input-height;
+			line-height: $form-input-height;
+			text-align: center;
+			pointer-events: none;
+			color: #bbb;
+		}
+	}
+
+	input {
+		border: 1px solid #ddd;
+		height: $form-input-height;
+		padding: 0 em(10);
+		width: 100%;
+		box-sizing: border-box !important;
+		border-radius: 5px;
+		box-shadow: 0 0 transparent;
+		transition: 300ms;
+		&:focus,
+		&:active {
+			outline: 0;
+			background-color: #f9f9f9;
+		}
+	}
+	select {
+		border: 1px solid #ddd;
+		height: $form-input-height;
+		padding: 0 em(10);
+		width: 100%;
+		box-sizing: border-box !important;
+		border-radius: 5px;
+		box-shadow: 0 0 transparent;
+		appearance: none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		background-color: #fff;
+		transition: 300ms;
+		&:focus,
+		&:active {
+			outline: 0;
+			background-color: #f9f9f9;
+		}
+	}
+	select::-ms-expand {
+		display: none;
+	}
+	textarea {
+		border: 1px solid #ddd;
+		height: ( $form-input-height * 2 );
+		padding: em(10);
+		width: 100%;
+		box-sizing: border-box !important;
+		border-radius: 5px;
+		box-shadow: 0 0 transparent;
+		resize: none;
+		transition: 300ms;
+		&:focus {
+			outline: 0;
+			background-color: #f9f9f9;
+		}
+	}
+	aside {
+		.search-form {
+			input[type="submit"] {
+				display: none;
+			}
+		}
+	}
+	.gform_wrapper {
+		form {
+			.gform_heading {
+				margin: em(15) 0;
+				.gform_title {
+					margin-bottom: 5px;
+				}
+				.gform_description {
+					margin-bottom: em(15);
+					display: block;
+				}
+			}
+			.gform_body {
+				.gfield_label {
+					text-transform: uppercase;
+					font-weight: 700;
+					font-size: 0.85em;
+				}
+				ul.gform_fields {
+					margin: 0;
+					padding: 0;
+					li.gfield {
+						list-style: none;
+						margin: 0 0 em(20) 0;
+						padding-left: 0;
+						li {
+							list-style: none;
+						}
+						.gfield_radio,
+						.gfield_checkbox {
+							margin: 0;
+							> li {
+								margin-bottom: em(8);
+							}
+							label {
+								display: inline-block;
+							}
+							input {
+								height: auto;
+								vertical-align: middle;
+								display: inline-block;
+								width: auto;
+								margin-right: em(10);
+							}
+						}
+						.ginput_container_multiselect {
+							select {
+								height: ( $form-input-height * 2 );
+								padding: em(10);
+							}
+							.select-holder {
+								&:after {
+									display: none;
+								}
+							}
+						}
+						.ginput_container_fileupload {
+							input {
+								border: 0 transparent;
+								padding: 0;
+							}
+						}
+					}
+				}
+			}
+			.gform_footer {
+				padding: $column-gutter 0;
+				input[type="submit"] {
+
+				}
+			}
+		}
+		.validation_error,
+		.validation_message {
+			margin-top: ( $column-gutter * 0.5 );
+			margin-bottom: ( $column-gutter * 0.5 );
+			padding: ( $column-gutter * 0.5 ) $column-gutter;
+			box-shadow: 0 1px 1px rgba( #000, 0.2 );
+			border-left: 3px solid #D64B15;
+			background-color: rgba( #D64B15, 0.5 );
+			font-weight: 700;
+			font-size: 0.85em;
+		}
+	}
+	.gform_ajax_spinner {
+		display: none;
+	}
+	.input-submit-wrapper {
+		position: relative;
+		&:after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			width: 0;
+			background-color: rgba(#000, 0.5);
+			opacity: 1;
+			transition: 1s;
+		}
+		&.bco-submit-animation {
+			&:after {
+				width: 100%;
+				opacity: 0.5;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
