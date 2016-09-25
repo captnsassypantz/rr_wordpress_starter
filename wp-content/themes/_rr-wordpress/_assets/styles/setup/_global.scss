@@ -234,3 +234,64 @@ img { -ms-interpolation-mode: bicubic; }
 	width: 100%;
 	margin: 0 auto;
 }
+
+@import "../components/decimal";
+
+$margin: 1.6%;
+
+@for $cols from 2 through 12 {
+	$span: $cols;
+	@while $span > 0 {
+		@if ($span == $cols) {
+			.span_#{$span}_of_#{$cols} { width: 100%; }
+		} @else {
+			.span_#{$span}_of_#{$cols} { width: decimal-round( (((100 - ($margin * ($cols - 1))) / $cols) * $span) + (($span - 1) * $margin) , 2, 'floor'); }
+		}
+		$span: $span - 1;
+	}
+}
+
+
+/*  SECTIONS  ============================================================================= */
+
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  GROUPING  ============================================================================= */
+
+
+.group:before,
+.group:after {
+    content:"";
+    display:table;
+}
+.group:after {
+    clear:both;
+}
+.group {
+    zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+/*  GRID COLUMN SETUP   ==================================================================== */
+
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+	text-align: center;
+}
+
+.col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
+
+
+/*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.col {
+		margin: 1% 0 1% 0%;
+		width: 100%;
+	}
+}

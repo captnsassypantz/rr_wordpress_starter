@@ -32,6 +32,39 @@ get_header(); ?>
 		</div> -->
 	</section>
 
+	<div class="section group">
+		<div class="col span_1_of_3">
+			This is column 1
+		</div>
+		<div class="col span_1_of_3">
+			This is column 2
+		</div>
+		<div class="col span_1_of_3">
+			This is column 3
+		</div>
+	</div>
+
+	<div class="section group">
+		<div class="col span_1_of_6">
+			This is column 1
+		</div>
+		<div class="col span_1_of_6">
+			This is column 2
+		</div>
+		<div class="col span_1_of_6">
+			This is column 3
+		</div>
+		<div class="col span_1_of_6">
+			This is column 1
+		</div>
+		<div class="col span_1_of_6">
+			This is column 2
+		</div>
+		<div class="col span_1_of_6">
+			This is column 3
+		</div>
+	</div>
+
 	<section id="Section__CTA1">
 		<div class="PageContainer">
 			<ul class="GridFours">

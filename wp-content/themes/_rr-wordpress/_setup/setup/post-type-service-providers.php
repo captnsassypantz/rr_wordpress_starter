@@ -1,6 +1,6 @@
 <?php
 /**
- * Communities
+ * Service Providers
  * @package brandco
  */
 
@@ -96,7 +96,6 @@ function RegisterCPT_ServiceProviders() {
 		'capability_type'    => 'page',
 		'has_archive'        => true,
 		'taxonomies' => array('service-providers'),
-		// 'rewrite' => array('slug' => 'themes/%service-providers%','with_front' => FALSE),
 		'hierarchical'       => true,
 		'menu_position'      => null,
 		'menu_icon'			 => $icon,
