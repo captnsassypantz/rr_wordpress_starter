@@ -11,7 +11,7 @@ get_header(); ?>
 	<!-- <section id="IntroHeader"
 		<?php
 
-				// echo 'style="background-image:url(/wp-content/uploads/2016/02/bg.jpg)"'; 
+				// echo 'style="background-image:url(/wp-content/uploads/2016/02/bg.jpg)"';
 
 		?>
 		>
@@ -35,20 +35,18 @@ get_header(); ?>
 				if ( $the_query->have_posts() ) {
 					while ( $the_query->have_posts() ) {
 						$the_query->the_post();
-						echo '<span>' . the_title() . '</span>';
+						the_title('<h3>', '</h3>');
 						the_content();
 						echo '<br>';
 						if ( has_post_thumbnail() ) {
 							echo '<img src=' . BrandCo\Image( null, 'medium' ) . '>';
 						}
-
 						echo '<br><br><hr>';
 					}
 				} else {}
 				wp_reset_postdata();
 			 ?>
 		</div>
-
 
 		</section>
 
