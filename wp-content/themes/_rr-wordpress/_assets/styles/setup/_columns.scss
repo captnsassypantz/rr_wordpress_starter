@@ -1,0 +1,121 @@
+/* ------------------------------------  */
+/*  COL SYSTEM START                     */
+/* ------------------------------------  */
+/* This file was made by BrandCo. Any use of this code without written approval from BrandCo is prohibited. */
+
+/*  SECTIONS  */
+.bcorr-section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.bcorr-col {
+	display: block;
+	float:left;
+	// margin: 1% 0 1% 1.8%;
+	margin: 0 0 0 1.8%;
+	*margin: 0 0 0 1.7%;
+}
+
+.bcorr-col-1 { margin-left: 0; }
+/*.bcorr-col-last-child { margin-right: 1.6%; }*/
+
+/*  GROUPING  */
+.bcorr-group:before,
+.bcorr-group:after { content:""; display:table; }
+.bcorr-group:after { clear:both;}
+.bcorr-group { zoom:1; /* For IE 6/7 */ }
+
+/* GRID OF ONE */
+.bcorr-span_1_of_1 {
+	width: 100%;
+}
+
+/*  GRID OF TWO  */
+.bcorr-span_2_of_2 {
+	width: 100%;
+}
+.bcorr-span_1_of_2 {
+	width: 49.1%;
+}
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+.bcorr-col {
+	@media only screen and (max-width: 480px) {
+		// margin: 1% 0 1% 0%;
+		margin: 0;
+	}
+	body.ie-480px & {
+		margin: 0;
+	}
+}
+.bcorr-span_2_of_2, .bcorr-span_1_of_2 {
+	@media only screen and (max-width: 480px) {
+		width: 100%;
+	}
+	body.ie-480px & {
+		width: 100%;
+	}
+}
+
+/*  GRID OF THREE  */
+.bcorr-span_3_of_3 {
+	width: 100%;
+}
+.bcorr-span_2_of_3 {
+	width: 66.06%;
+}
+.bcorr-span_1_of_3 {
+	width: 32.13%;
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+.bcorr-col.bcorr-span_3_of_3, .bcorr-col.bcorr-span_2_of_3, .bcorr-col.bcorr-span_1_of_3 {
+	@media only screen and (max-width: 600px) {
+		margin: 0;
+	}
+	body.ie-600px & {
+		margin: 0;
+	}
+}
+.bcorr-span_3_of_3, .bcorr-span_2_of_3, .bcorr-span_1_of_3 {
+	@media only screen and (max-width: 600px) {
+		width: 100%;
+	}
+	body.ie-600px & {
+		width: 100%;
+	}
+}
+
+/*  GRID OF FOUR  */
+.bcorr-span_4_of_4 {
+	width: 100%;
+}
+.bcorr-span_3_of_4 {
+	width: 74.55%;
+}
+.bcorr-span_2_of_4 {
+	width: 49.1%;
+}
+.bcorr-span_1_of_4 {
+	width: 23.65%;
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+.bcorr-col.bcorr-span_4_of_4, .bcorr-col.bcorr-span_3_of_4, .bcorr-col.bcorr-span_2_of_4, .bcorr-col.bcorr-span_1_of_4 {
+	@media only screen and (max-width: 800px) {
+		margin: 0;
+	}
+	body.ie-800px & {
+		margin: 0;
+	}
+}
+.bcorr-span_4_of_4, .bcorr-span_3_of_4, .bcorr-span_2_of_4, .bcorr-span_1_of_4 {
+	@media only screen and (max-width: 800px) {
+		width: 100%;
+	}
+	body.ie-800px & {
+		width: 100%;
+	}
+}

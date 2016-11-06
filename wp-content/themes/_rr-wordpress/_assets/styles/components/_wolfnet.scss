@@ -196,7 +196,7 @@ body#wolf #content .container img{
 body#wolf{
 	#wnt-wrap{
 
-		border-top: 4px solid $primary-color;
+		border-top: 4px solid$light-color;
 
 		fieldset{
 			border: 0;
@@ -224,7 +224,7 @@ body#wolf{
 		}
 
 		.btn-primary{
-			background-color: $primary-color;
+			background-color:$light-color;
 		}
 	}
 }

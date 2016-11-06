@@ -7,7 +7,7 @@
 	h6 {
 		margin-bottom: em(30);
 		line-height: 1;
-		color: $primary-color;
+		color:$light-color;
 	}
 	h1,
 	h2 {
@@ -28,7 +28,7 @@
 
 	a {
 		font-weight: 700;
-		color: $primary-color;
+		color:$light-color;
 		border-bottom: 1px dotted;
 	}
 	ul {
@@ -51,7 +51,7 @@
 		font-weight: 700;
 		transition: 300ms;
 		&:hover {
-			color: $primary-color;
+			color:$light-color;
 		}
 	}
 	img {
@@ -84,7 +84,7 @@
 		font-weight: 700;
 		transition: 300ms;
 		&.current {
-			background-color: $primary-color;
+			background-color:$light-color;
 			color: #fff;
 		}
 		&:hover {
@@ -136,7 +136,7 @@
 		display: block;
 		.single-title {
 			margin: em(8) 0;
-			color: $primary-color;
+			color:$light-color;
 			&:after {
 				content: '\f178';
 				@include fa;
@@ -235,7 +235,7 @@ body.search {
 		.archive-title,
 		.search-title {
 			margin: em(8) 0;
-			color: $primary-color;
+			color:$light-color;
 		}
 	}
 }
@@ -246,7 +246,7 @@ body.search {
 
 	.entry-title,
 	.PageTitle {
-		border-bottom: 2px solid $primary-color;
+		border-bottom: 2px solid$light-color;
 		padding-bottom: 30px;
 	}
 }
@@ -299,7 +299,7 @@ body.search {
 
 	a {
 		font-weight: 700;
-		color: $primary-color;
+		color:$light-color;
 		border-bottom: 1px dotted;
 	}
 }

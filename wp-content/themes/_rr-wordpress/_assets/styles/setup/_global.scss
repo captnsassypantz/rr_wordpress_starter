@@ -1,13 +1,25 @@
 /*-------------------------
 # Variables
 -------------------------*/
-$primary-color: #292929 !default;   // red
-$secondary-color: #c62340 !default; // dark gray
-$accent-color: #76bcc8 !default; // dark gray
-$alert-color: #f4f4f4 !default;     // cinnabar
-$success-color: #43AC6A !default;   // sea-green
-$warning-color: #f08a24 !default;   // carrot
-$info-color: #a0d3e8 !default;      // cornflower
+// Fonts
+$header-font: 'Arvo', sans-serif;
+$body-font: 'Open Sans', sans-serif;
+$alt-font: 'Open Sans', sans-serif;
+
+// Forms
+$form-field-height: 50px !default;
+
+$light-color: #228d6e !default;
+$dark-color: #6794af !default;
+$accent-color: #192f55 !default;
+
+//$light-color:
+//$dark-color:
+// $accent-color:
+ $alert-color: #f4f4f4 !default;
+// $success-color: #43AC6A !default;
+// $warning-color: #f08a24 !default;
+// $info-color: #a0d3e8 !default;
 
 // Font family
 $global-font-family: 'Open Sans', sans-serif !default;
@@ -30,7 +42,7 @@ $line-height: 1.8;
 
 // Font color
 $global-font-color: #333 !default;
-$global-header-color: $primary-color !default;
+$global-header-color:$light-color !default;
 
 // Link color
 $global-link-color: #333 !default;
@@ -116,13 +128,9 @@ body {
 	overflow-x: hidden;
 }
 
-#SiteMainWrapper {
-	background-color: #fff;
-}
-
 .PageContainer {
 	@include clearfix();
-	max-width: em(1060);
+	max-width: em(1120);
 	margin: 0 auto;
 	position: relative;
 	z-index: 50;
@@ -233,65 +241,4 @@ img { -ms-interpolation-mode: bicubic; }
 	z-index: $z-content;
 	width: 100%;
 	margin: 0 auto;
-}
-
-@import "../components/decimal";
-
-$margin: 1.6%;
-
-@for $cols from 2 through 12 {
-	$span: $cols;
-	@while $span > 0 {
-		@if ($span == $cols) {
-			.span_#{$span}_of_#{$cols} { width: 100%; }
-		} @else {
-			.span_#{$span}_of_#{$cols} { width: decimal-round( (((100 - ($margin * ($cols - 1))) / $cols) * $span) + (($span - 1) * $margin) , 2, 'floor'); }
-		}
-		$span: $span - 1;
-	}
-}
-
-
-/*  SECTIONS  ============================================================================= */
-
-.section {
-	clear: both;
-	padding: 0px;
-	margin: 0px;
-}
-
-/*  GROUPING  ============================================================================= */
-
-
-.group:before,
-.group:after {
-    content:"";
-    display:table;
-}
-.group:after {
-    clear:both;
-}
-.group {
-    zoom:1; /* For IE 6/7 (trigger hasLayout) */
-}
-
-/*  GRID COLUMN SETUP   ==================================================================== */
-
-.col {
-	display: block;
-	float:left;
-	margin: 1% 0 1% 1.6%;
-	text-align: center;
-}
-
-.col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
-
-
-/*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
-
-@media only screen and (max-width: 480px) {
-	.col {
-		margin: 1% 0 1% 0%;
-		width: 100%;
-	}
 }

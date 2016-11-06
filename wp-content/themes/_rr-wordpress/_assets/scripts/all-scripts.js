@@ -4872,8 +4872,8 @@ if( ! (/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navig
 			}
 		}
 	});
-} 
- 
+}
+
 jQuery(function($){
 
 	// Optimize Nav Experience
@@ -4943,7 +4943,7 @@ jQuery(function($){
 					}
 				}
 			]
-		});	
+		});
 	});
 
 	// Select field holder
@@ -4976,7 +4976,7 @@ jQuery(function($){
 	});
 
 	// Mobile menu stuff
-	$('#menu-toggle').click(function(){
+	$('#bcorr-navigation').click(function(){
 		if ( ! $('html').hasClass('mobile-navigation-active') ) {
 			$('html').addClass('mobile-navigation-active');
 		} else {
@@ -5069,7 +5069,7 @@ jQuery(function($){
 		}
 	});
 
-	// Inview 
+	// Inview
 	var wow = new WOW({
 		boxClass: 'element-inview',
 	});

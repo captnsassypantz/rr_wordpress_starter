@@ -1,21 +1,21 @@
-#SiteNavigation {
+#bcorr-navigation {
 	text-align: center;
 
 	#MobileToggle {
 		white-space: nowrap;
 		line-height: 40px;
 		padding: 0 15px;
-		display: inline-block; 
+		display: inline-block;
 
 		@include breakpoint('DesktopMenu') {
 			display: none;
 		}
 	}
-	
+
 	&.SimpleResponsiveNav {
 
 		#PrimaryMenu {
-			display: none; 
+			display: none;
 			text-align: left;
 
 			@include breakpoint('DesktopMenu') {
@@ -25,7 +25,7 @@
 				position: relative;
 				z-index: 9999;
 			}
-			
+
 			ul {
 				margin: 0;
 				padding: 0;
@@ -47,7 +47,7 @@
 						visibility: hidden;
 						transition: 300ms;
 					}
-					
+
 					&:hover {
 						> .sub-menu {
 							display: block !important;
@@ -55,7 +55,7 @@
 							opacity: 1;
 							transform: translate(0px);
 							z-index: 9999;
-							background-color: $primary-color;
+							background-color:$light-color;
 
 
 						}
@@ -72,7 +72,7 @@
    				letter-spacing: 1px;
 
 				&:hover{
-					// border-bottom: 2px solid $primary-color;
+					// border-bottom: 2px solid$light-color;
 				}
 			}
 
@@ -95,7 +95,7 @@
 					}
 
 					a {
-						background-color: $primary-color;
+						background-color:$light-color;
 						text-align: left;
 						color: white;
 
@@ -143,7 +143,7 @@
 #mobile-navigation {
 	position: fixed;
 	z-index: $z-mobile-nav;
-	top: 0; 
+	top: 0;
 	left: 0;
 	bottom: 0;
 	width: 70%;
@@ -239,6 +239,11 @@ html {
 			body {
 				height: 100%;
 			}
+
+			#PrimaryMenu{
+				display: block !important;
+			}
+
 			#mobile-navigation {
 				transform: translateX(0%);
 			}
@@ -249,20 +254,3 @@ html {
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

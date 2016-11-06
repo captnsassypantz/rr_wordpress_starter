@@ -5,7 +5,8 @@
 @import "setup/functions";
 @import "setup/breakpoints";
 @import "setup/global";
-@import "setup/icons";
+// @import "setup/icons";
+@import "setup/columns";
 
 /*--------------------------
 ## Plugins
@@ -29,6 +30,7 @@
 @import "components/home";
 @import "components/content";
 @import "components/sidebar";
-@import "components/misc";
+// @import "components/misc";
 @import "components/wolfnet";
 @import "components/layout-archives";
+@import "components/slider";

@@ -6,7 +6,7 @@ html:not([data-bcowolf]) {
 		text-transform: uppercase;
 		color: #fff;
 		border: 0px solid transparent;
-		background-color: $primary-color;
+		background-color:$light-color;
 		padding: 8px;
 		text-transform: uppercase;
 		box-shadow: 0 0 transparent;
@@ -26,7 +26,7 @@ html:not([data-bcowolf]) {
 		padding: 15px 25px;
 		min-width: 200px;
 		border-radius: 3px;
-		background-color: $primary-color;
+		background-color:$light-color;
 		color: #fff;
 		text-transform: uppercase;
 		letter-spacing: 1px;

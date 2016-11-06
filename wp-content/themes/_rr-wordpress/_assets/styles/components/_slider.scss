@@ -1,0 +1,74 @@
+.slides {
+
+  #homepage-cta{
+    position: absolute;
+    z-index: 99;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100px;
+    margin: auto;
+
+    @include breakpoint('below_500px'){
+      height: 0;
+    }
+
+    h1{
+      text-transform: capitalize;
+      font-weight: 100;
+      font-size: 90px;
+      font-family: $header-font-family;
+
+      @include breakpoint('below_500px'){
+        font-size: 55px;
+      }
+    }
+
+    .buttons{
+      margin-top: 40px;
+
+      button{
+        border-radius: 3px;
+        padding: 13px 95px;
+        margin: 0 10px;
+
+        @include breakpoint('below_500px'){
+          margin: 10px;
+          width: 280px;
+        }
+
+        a{
+          color: white;
+          letter-spacing: 3px;
+          font-size: 18px;
+
+          i{
+            vertical-align: text-top;
+            padding-right: 5px;
+          }
+        }
+      }
+
+      button:nth-of-type(2){
+        background-color:$dark-color;
+      }
+    }
+  }
+
+  li {
+    background-size: cover;
+    height: 425px;
+    background-position: center center;
+    position: relative;
+
+    a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 25;
+    }
+  }
+}
